@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../dist/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      .li {
+        position: relative;
+      }
+      .li > .a::after {
+        position: absolute;
+        content: "";
+        height: 4px;
+        width: 0px;
+        background-color: #0d5cb6;
+        bottom: 0;
+        left: 0;
+        /* transition: 0.2s ease; */
+      }
+      .lia > .aa::before {
+        position: absolute;
+        content: "";
+        height: 4px;
+        width: 72px;
+        background-color: #0d5cb6;
+        bottom: -18px;
+        left: 10px;
+      }
+      .li:hover > .a::after {
+        position: absolute;
+        width: 72px;
+        left: 10px;
+        bottom: -18px;
+      }
+      .div > .p::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-left: 1px solid #c7c7c7;
+        height: 15px;
+        right: 665px;
+        top: 240px;
+        transform: translateY(-50%);
+      }
+      .icon::after {
+        right: 394px;
+        transform: rotate(135deg);
+      }
+      .icon::before {
+        left: -5px;
+        transform: rotate(-45deg);
+      }
+      .icon::before,
+      .icon::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: rgb(255, 255, 255);
+        border-width: 1px;
+        border-style: solid;
+        border-color: transparent rgb(13, 92, 182) rgb(13, 92, 182) transparent;
+        border-image: initial;
+        position: absolute;
+        top: 50%;
+        margin-top: -5px;
+        border-radius: 50%;
+      }
+      .icon2::after {
+        right: 209px;
+        transform: rotate(135deg);
+      }
+      .icon2::before {
+        left: 181px;
+        transform: rotate(-45deg);
+      }
+      .icon2::before,
+      .icon2::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: rgb(255, 255, 255);
+        border-width: 1px;
+        border-style: solid;
+        border-color: transparent rgb(13, 92, 182) rgb(13, 92, 182) transparent;
+        border-image: initial;
+        position: absolute;
+        top: 50%;
+        margin-top: -5px;
+        border-radius: 50%;
+      }
+      .icon1::after {
+        right: 302px;
+        transform: rotate(135deg);
+      }
+      .icon1::before {
+        left: 88px;
+        transform: rotate(-45deg);
+      }
+      .icon1::before,
+      .icon1::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: rgb(255, 255, 255);
+        border-width: 1px;
+        border-style: solid;
+        border-color: transparent rgb(13, 92, 182) rgb(13, 92, 182) transparent;
+        border-image: initial;
+        position: absolute;
+        top: 50%;
+        margin-top: -5px;
+        border-radius: 50%;
+      }
+      #chonmua:hover {
+        opacity: 0.8;
+      }
+      #pro:hover {
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        opacity: 0.8;
+        color: #000;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="bg-primary pt-2 sm:hidden md:hidden">
+      <div class="container mx-auto">
+        <div class="flex h-16 items-center">
+          <div class="flex basis-40">
+            <a href="../index.html">
+              <img
+                class="w-14 h-10 cursor-pointer"
+                src="https://salt.tikicdn.com/ts/upload/ae/f5/15/2228f38cf84d1b8451bb49e2c4537081.png"
+              />
+            </a>
+          </div>
+          <div class="flex items-center flex-grow">
+            <input
+              type="text "
+              class="flex-grow h-10 rounded-l-lg outline-0 pl-3"
+              placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ..."
+            />
+            <button
+              class="flex bg-header text-white h-10 items-center w-28 justify-center rounded-r-lg"
+            >
+              <img src="../images/seach.svg" alt="" />
+              <span class=""> Tìm kiếm </span>
+            </button>
+          </div>
+          <div class="flex text-white items-center cursor-pointer">
+            <div class="ml-4 flex items-center mr-2">
+              <img src="../../src/images/user.svg" alt="" />
+            </div>
+            <div class="flex flex-col">
+              <span class="text-xs">Đăng nhập/ Đăng ký</span>
+              <div>
+                <span class="flex items-center text-sm"
+                  >Tài khoản
+                  <img
+                    class="w-4 h-4"
+                    src="https://salt.tikicdn.com/ts/upload/d7/d4/a8/34939af2da1ceeeae9f95b7485784233.png"
+                  />
+                </span>
+              </div>
+            </div>
+            <div class="flex relative ml-8">
+              <a href="" class="flex">
+                <div class="">
+                  <img src="../../src/images/giohang.svg" alt="" />
+                  <span
+                    class="absolute top-0 left-5 bottom-1 bg-yellow text-black rounded-3xl w-5 h-4 flex justify-center items-center text-xs"
+                    value="0"
+                    id="soluong"
+                    >0</span
+                  >
+                </div>
+                <div class="ml-2 text-xs items-end flex">Giỏ hàng</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between pb-4">
+          <div class="cursor-pointer">
+            <img
+              src="https://salt.tikicdn.com/ts/upload/e5/1d/22/61ff572362f08ead7f34ce410a4a6f96.png"
+              alt="free-ship-badge"
+              height="12"
+              width="83"
+            />
+          </div>
+          <ul class="flex text-xs items-center text-white mr-72">
+            <li class="mr-3"><a href="">fahasha nhà sách</a></li>
+            <li class="mr-3"><a href="">tâm lý học</a></li>
+            <li class="mr-3"><a href="">tuổi trẻ đáng giá bao nhiêu</a></li>
+            <li class="mr-3"><a href="">sách hay</a></li>
+            <li class="mr-3">
+              <a href="">khi bạn đang mơ thì người khác đang nỗ lực</a>
+            </li>
+          </ul>
+          <div
+            class="flex items-center text-white bg-primarynhat rounded-lg px-2"
+          >
+            <div class="mr-1"><img src="../images/home.svg" alt="" /></div>
+            <div class="text-xs">Bán hàng cùng tiki</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Content -->
+    <div class="bg-gray-100" id="product"></div>
+    <!-- Footer -->
+    <div class="bg-gray-100">
+      <div
+        class="container mx-auto grid grid-cols-5 gap-1 text-xs bg-white 2xl:pl-4 py-3 sm:grid-cols-1 sm:p-3 md:p-4 md:grid-cols-3 lg:p-4"
+      >
+        <div class="sm:text-center">
+          <h3 class="text-base font-medium mb-3">Hỗ trợ khách hàng</h3>
+          <div class="text-nhat">
+            <div class="mb-1 sm:mb-2 sm:text-sm">Hotline:1900-6035</div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">
+              (1000 đ/phút, 8-21h kể cả T7, CN)
+            </div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">Các câu hỏi thường gặp</div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">Gửi yêu cầu hỗ trợ</div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">Hướng dẫn đặt hàng</div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">Phương thức vận chuyển</div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">Chính sách đổi trả</div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">Hướng dẫn trả góp</div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">Chính sách hàng nhập khẩu</div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">
+              Hỗ trợ khách hàng:hotro@tiki.vn
+            </div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">
+              Báo lỗi bảo mật: security@tiki.vn
+            </div>
+          </div>
+        </div>
+        <div class="sm:text-center">
+          <h3 class="text-base font-medium mb-3">Về TIKI</h3>
+          <div class="text-nhat">
+            <div class="mb-1 sm:mb-2 sm:text-sm">Giới thiệu Tiki</div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">
+              Chính sách bảo mật thanh toán
+            </div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">
+              Chính sách bảo mật thông tin cá nhân
+            </div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">
+              Chính sách giải quyết khiếu nại
+            </div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">Điều khoản sử dụng</div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">Giới thiệu Tiki Xu</div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">
+              Tiếp thị liên kết cùng Tiki
+            </div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">Bán hàng doanh nghiệp</div>
+            <div class="mb-1 sm:mb-2 sm:text-sm">Điều kiện vận chuyển</div>
+          </div>
+        </div>
+        <div class="sm:text-center sm:text-sm">
+          <h3 class="text-base font-medium mb-3">Hợp tác liên kết</h3>
+          <div class="text-nhat mb-2">Quy chế hoạt động Sàn GDTMĐT</div>
+          <div class="mb-6 text-nhat">Bán hàng cùng Tiki</div>
+          <h3 class="text-base font-medium mb-3">Chứng nhận bởi</h3>
+          <div class="flex sm:justify-center">
+            <img src="../images/kohanggia.svg" alt="" class="mr-1" />
+            <img src="../images/dadangky.svg" alt="" />
+          </div>
+        </div>
+        <div>
+          <h3 class="text-base font-medium mb-3 sm:text-center sm:mt-3">
+            Phương thức thanh toán
+          </h3>
+          <div
+            class="flex flex-wrap pr-4 sm:grid sm:grid-cols-4 sm:mt-3 sm:pl-[45px]"
+          >
+            <img class="mr-2 mb-2" src="../images/tiki.svg" alt="" />
+            <img class="mr-2 mb-2" src="../images/visa.svg" alt="" />
+            <img class="mr-2 mb-2" src="../images/haitron.svg" alt="" />
+            <img class="mr-2 mb-2" src="../images/jbc.svg" alt="" />
+            <img class="mr-2 mb-2" src="../images/atm.svg" alt="" />
+            <img class="mr-2 mb-2" src="../images/momo.svg" alt="" />
+            <img class="mr-2 mb-2" src="../images/zalopay.svg" alt="" />
+            <img class="mr-2 mb-2" src="../images/moca.svg" alt="" />
+            <img class="mr-2 mb-2" src="../images/dienthoaido.svg" alt="" />
+            <img class="mr-2 mb-2" src="../images/vnpay.svg" alt="" />
+            <img class="mr-2 mb-2" src="../images/tratien.svg" alt="" />
+            <img class="mr-2 mb-2" src="../images/tragop.svg" alt="" />
+          </div>
+          <h3 class="text-base font-medium mb-3 mt-2 sm:text-center">
+            Dịch vụ giao hàng
+          </h3>
+          <div class="sm:flex sm:justify-center sm:mb-2">
+            <img src="../images/tikinow.svg" alt="" class="" />
+          </div>
+        </div>
+        <div class="flex flex-col sm:text-center">
+          <h3 class="text-base font-medium mb-3">Kết nói với chúng tôi</h3>
+          <div class="flex mb-5 sm:justify-center">
+            <img class="mr-2" src="../images/fb.svg" alt="" />
+            <img class="mr-2" src="../images/ytb.svg" alt="" />
+            <img class="mr-2" src="../images/zalo.svg" alt="" />
+          </div>
+          <h3 class="text-base font-medium mb-3">
+            Tải ứng dụng trên điện thoại
+          </h3>
+          <div class="flex sm:justify-center">
+            <img class="mr-2 sm:mr-4" src="../images/qr.svg" alt="" />
+            <div class="flex flex-col items-center">
+              <img class="mb-4" src="../images/appstore.svg" alt="" />
+              <img src="../images/chplay.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray-100">
+        <div
+          class="pl-4 container mx-auto border-t text-xs text-nhat bg-white pt-2 sm:p-4 mb-3 md:pr-4"
+        >
+          <div class="mt-4">
+            Trụ sở chính: Tòa nhà Viettel, Số 285, đường Cách Mạng Tháng 8,
+            phường 12, quận 10, Thành phố Hồ Chí Minh
+          </div>
+          <div class="mt-2">
+            Tiki nhận đặt hàng trực tuyến và giao hàng tận nơi, chưa hỗ trợ mua
+            và nhận hàng trực tiếp tại văn phòng hoặc trung tâm xử lý đơn hàng
+          </div>
+          <div class="mt-2">
+            Giấy chứng nhận Đăng ký Kinh doanh số 0309532909 do Sở Kế hoạch và
+            Đầu tư Thành phố Hồ Chí Minh cấp lần đầu ngày 06/01/2010 và sửa đổi
+            lần thứ 23 ngày 14/02/2022
+          </div>
+          <div class="mt-2">© 2022 - Bản quyền của Công ty TNHH Ti Ki</div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./detail.js"></script>
+  </body>
+</html>
